@@ -1,14 +1,12 @@
-import Image from "next/image";
+import React from "react";
 import Navbar from "../../componets/NavBar";
 import Footer from "../../componets/Footer";
 
-export default function AboutPage() {
+export default function About() {
   return (
     <div>
-      {/* Navbar (Client Component) */}
       <Navbar />
 
-      {/* Sección 1 */}
       <section className="bg-gray-50 py-20 mt-24">
         <div className="container mx-auto px-6 flex flex-col lg:flex-row lg:space-x-12 items-center">
           <div className="lg:w-1/2 mb-12 lg:mb-0">
@@ -23,12 +21,14 @@ export default function AboutPage() {
             <p className="text-lg text-gray-700 mb-6">
               Our commitment to safety is paramount, and we achieve this by
               utilizing a blend of pre-consumer and post-consumer reclaimed
-              material components...
+              material components. As industry innovators, we take pride in
+              crafting surfaces that not only provide a cushioned and secure
+              play area but also contribute to environmental sustainability.
             </p>
           </div>
           <div className="lg:w-1/2 flex justify-center">
-            <Image
-              
+            <img
+              src="/img/img.jpg"
               alt="Playground Safety"
               className="rounded-lg shadow-lg w-4/5 lg:w-full"
             />
@@ -36,12 +36,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Sección 2 */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-6 flex flex-col lg:flex-row lg:space-x-12 items-center">
           <div className="lg:w-1/2 flex justify-center mb-12 lg:mb-0">
             <img
-              src="/public/img/core.png"
+              src="/img/core.png"
               alt="Core Values"
               className="rounded-lg shadow-lg w-4/5 lg:w-full"
             />
@@ -49,23 +48,26 @@ export default function AboutPage() {
           <div className="lg:w-1/2 lg:pl-10">
             <ul className="list-disc list-inside text-lg text-gray-700 space-y-4">
               <li>
-                <strong>Safety Paramount:</strong> Quality materials...
+                <strong>Safety Paramount:</strong> Quality materials, rigorous
+                standards, accessibility for all users.
               </li>
               <li>
-                <strong>Quality:</strong> Ensuring excellence...
+                <strong>Quality:</strong> Ensuring excellence in beauty,
+                durability, safety, and versatility.
               </li>
               <li>
-                <strong>Communication:</strong> Transparent, clear...
+                <strong>Communication:</strong> Transparent, clear, and
+                responsive to client needs and concerns.
               </li>
               <li>
-                <strong>Team Work:</strong> Expecting teamwork...
+                <strong>Team Work:</strong> Expecting teamwork with our partners
+                and employees.
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Sección 3 */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-blue-950 mb-10">
@@ -77,7 +79,14 @@ export default function AboutPage() {
                 Diverse Applications
               </h3>
               <p className="text-gray-700">
-                Poured-in-place, tile, and artificial turf systems...
+                Poured-in-place, tile, and artificial turf systems are available
+                in a variety of colors for a wide array of applications.
+                Recreational Surfacing INC is used at schools, parks, daycare
+                centers, fitness facilities, military bases, quick-serve
+                restaurants, hospitality, shopping centers, and homeowner
+                playgrounds. Our porous surfaces are highly weather-resistant
+                and provide customers with a virtually maintenance-free play
+                surface.
               </p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg">
@@ -85,7 +94,12 @@ export default function AboutPage() {
                 Quality Materials and Installation
               </h3>
               <p className="text-gray-700">
-                We use the best materials so our rubber play surfaces...
+                We use the best materials so our rubber play surfaces are clean,
+                safe, and made to last. Our experienced installers know how to
+                make a rubber playground safety surface come alive! Our quality
+                installations last. Our work is done fast, right, and on budget.
+                Customers appreciate our friendly service and helpful support –
+                before, during, and after installation.
               </p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg">
@@ -93,26 +107,33 @@ export default function AboutPage() {
                 Seamless Project Management
               </h3>
               <p className="text-gray-700">
-                Recreational Surfacing INC excels in project management...
+                Recreational Surfacing INC excels in project management by
+                staying on top of every detail from bid and specification
+                through construction and closeout to carefully adhering to
+                schedules and budgets. We confidently guarantee our work because
+                it’s our own people who deliver the quality product and service.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sección 4 */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-orange-600 mb-6">
             Sustainability Matters
           </h2>
           <p className="text-lg text-gray-700 text-center mb-6">
-            Recreational Surfacing INC adheres to the Consumer Product Safety...
+            Recreational Surfacing INC adheres to the Consumer Product Safety
+            Commission’s guidelines for public playgrounds. We also perform
+            continual testing on all raw materials used in our systems for
+            quality, properties, and strength. Our commitment to sustainability
+            is reflected in our upcycling initiatives, which divert thousands of
+            tires from landfills every year.
           </p>
         </div>
       </section>
 
-      {/* Footer (Client Component) */}
       <Footer />
     </div>
   );
