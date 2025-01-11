@@ -28,7 +28,7 @@ export default function About() {
           </div>
           <div className="lg:w-1/2 flex justify-center">
             <img
-              src="/img/img.jpg"
+              src="/img/img.webp"
               alt="Playground Safety"
               className="rounded-lg shadow-lg w-4/5 lg:w-full"
             />
@@ -40,7 +40,7 @@ export default function About() {
         <div className="container mx-auto px-6 flex flex-col lg:flex-row lg:space-x-12 items-center">
           <div className="lg:w-1/2 flex justify-center mb-12 lg:mb-0">
             <img
-              src="/img/core.png"
+              src="/img/core.webp"
               alt="Core Values"
               className="rounded-lg shadow-lg w-4/5 lg:w-full"
             />

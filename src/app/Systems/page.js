@@ -57,32 +57,32 @@ export default function SystemsPage() {
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <img
-                src="/img/cat1.jpg"
+                src="/img/cat1.webp"
                 alt="Gallery Image 1"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat2.jpg"
+                src="/img/cat2.webp"
                 alt="Gallery Image 2"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat3.jpg"
+                src="/img/cat3.webp"
                 alt="Gallery Image 3"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat4.jpg"
+                src="/img/cat4.webp"
                 alt="Gallery Image 4"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat5.jpg"
+                src="/img/cat5.webp"
                 alt="Gallery Image 5"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat6.jpg"
+                src="/img/cat6.webp"
                 alt="Gallery Image 6"
                 className="rounded-lg shadow-lg"
               />
@@ -109,32 +109,32 @@ export default function SystemsPage() {
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <img
-                src="/img/turf1.jpg"
+                src="/img/turf1.webp"
                 alt="Synthetic Turf 1"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/turf2.jpg"
+                src="/img/turf2.webp"
                 alt="Synthetic Turf 2"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/turf3.jpg"
+                src="/img/turf3.webp"
                 alt="Synthetic Turf 3"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/turf4.jpg"
+                src="/img/turf4.webp"
                 alt="Synthetic Turf 4"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/turf5.jpg"
+                src="/img/turf5.webp"
                 alt="Synthetic Turf 5"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/turf6.jpg"
+                src="/img/turf6.webp"
                 alt="Synthetic Turf 6"
                 className="rounded-lg shadow-lg"
               />
@@ -222,27 +222,27 @@ export default function SystemsPage() {
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/equi2.jpg"
+                src="/img/equi2.webp"
                 alt="Equipment Installation 2"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/equi3.jpg"
+                src="/img/equi3.webp"
                 alt="Equipment Installation 3"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/equi4.jpg"
+                src="/img/equi4.webp"
                 alt="Equipment Installation 4"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/equi5.jpg"
+                src="/img/equi5.webp"
                 alt="Equipment Installation 5"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/equi6.jpg"
+                src="/img/equi6.webp"
                 alt="Equipment Installation 6"
                 className="rounded-lg shadow-lg"
               />
@@ -273,7 +273,7 @@ export default function SystemsPage() {
           </div>
           <div className="lg:w-1/2 text-center">
             <img
-              src="/img/img2.jpg"
+              src="/img/img2.webp"
               alt="Safety Playground"
               className="rounded-lg shadow-lg ml-6"
             />

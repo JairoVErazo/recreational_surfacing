@@ -27,7 +27,7 @@ export default function HomePage() {
           <div className="lg:w-1/2">
             <div className="relative">
               <img
-                src="/img/principal.jpg"
+                src="/img/principal.webp"
                 alt="Playground Surface"
                 className="rounded-lg shadow-lg"
               />
@@ -68,7 +68,7 @@ export default function HomePage() {
             {/* Card 2 */}
             <div className="bg-gray-100 rounded-lg p-6 shadow hover:shadow-lg transition">
               <img
-                src="/img/dos.jpg"
+                src="/img/dos.webp"
                 alt="Synthetic Turf"
                 className="rounded-lg mb-4"
               />
@@ -104,7 +104,7 @@ export default function HomePage() {
             {/* Card 4 */}
             <div className="bg-gray-100 rounded-lg p-6 shadow hover:shadow-lg transition">
               <img
-                src="/img/cuatro.jpg"
+                src="/img/cuatro.webp"
                 alt="Equipment Installation"
                 className="rounded-lg mb-4"
               />
