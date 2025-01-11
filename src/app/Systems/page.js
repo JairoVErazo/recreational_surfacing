@@ -95,16 +95,20 @@ export default function SystemsPage() {
             <h2 className="text-2xl font-bold text-orange-600 mb-4">
               Synthetic Turf
             </h2>
-            <p className="text-gray-700">
-              Artificial turf is a durable and low-maintenance safety surfacing
-              option that mimics the appearance of natural grass while providing
-              the necessary safety features for playgrounds and sports areas.
+            <p className="text-gray-700 mb-4">
+              A playground should be a safe place for your children to run and play, however sooner or later your kids are going to end up on the ground or taking a fall when they’re playing. Artificial turf offers the perfect solution for playground surfacing. Whether you are a day care facility, community play area, public park, or private playground area, we have been testing our products for years to ensure that we produce only the best artificial turf surface for these applications. We have systems available that can meet any desired fall height rating up to 12 feet! Artificial turf is softer and safer than gravel, dirt, wood mulch or natural grass and is practically maintenance-free. You can feel confident that your children will have a safe play surface when you choose artificial turf to cover your playground. Our advanced primary backing allows maximum drainage and is environmentally friendly. Combine this with our premium fibers and industry leading turf technology and you get the absolute best surface on the playground market today.
             </p>
-            <ul className="list-disc list-inside text-gray-700 mt-4 mb-4">
-              <li>Highly durable and weather-resistant</li>
-              <li>Available in multiple colors and designs</li>
-              <li>Requires minimal maintenance</li>
-              <li>Safe and comfortable for children and athletes</li>
+            <p className="text-gray-700 mb-4">
+              Synthetic turf systems are designed from the ground up for safety. With our PolyGreen padding, antimicrobial infill and other safety features, these systems have been used to successfully surface millions of square feet of commercial playgrounds. If you want the peace of mind of going with a proven system, playground turf for your backyard.
+            </p>
+            <h3 className="text-lg font-bold text-blue-900 mb-4">Synthetic Turf Benefits</h3>
+            <ul className="list-disc list-inside text-gray-700 mb-4">
+              <li>Padded underlayment</li>
+              <li>Reduces allergic reactions</li>
+              <li>Drains quickly</li>
+              <li>Safer than playground mulch</li>
+              <li>Eliminates ongoing maintenance</li>
+              <li>Environmentally friendly</li>
             </ul>
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -147,46 +151,58 @@ export default function SystemsPage() {
             <h2 className="text-2xl font-bold text-orange-600 mb-4">
               Bonded Rubber Mulch
             </h2>
-            <p className="text-gray-700">
-              Bonded rubber mulch offers a natural look and excellent shock
-              absorption, making it a popular choice for playgrounds and
-              landscaped areas.
+            <p className="text-gray-700 mb-4">
+              Discover the beauty of nature and safety combined with Bonded Rubber Mulch safety surfacing—an innovative solution for creating unique trails, paths, and playground surfaces. Our one-step pour system offers a cost-effective, long-lasting, safe, and durable option for playgrounds, parks, zoos, horse walking/training facilities, and more.
             </p>
-            <ul className="list-disc list-inside text-gray-700 mt-4 mb-4">
-              <li>Eco-friendly and made from recycled materials</li>
-              <li>Low maintenance and long-lasting</li>
-              <li>Provides superior cushioning and safety</li>
-              <li>Natural aesthetic for outdoor environments</li>
+            <p className="text-gray-700 mb-4">
+              Bonded Rubber Mulch is a spectacular choice that seamlessly blends into natural settings while providing unmatched safety. Its versatility allows it to be easily combined with EPDM product inlays, extending design possibilities and enhancing the overall aesthetic appeal of any space.
+            </p>
+            <p className="text-gray-700 mb-4">
+              One of the key characteristics of Bonded Rubber Mulch is its ability to accommodate piling and sloping, creating a natural ground setting that deceives passersby until they step onto the surface and experience its anti-fatigue qualities with each step.
+            </p>
+            <p className="text-gray-700 mb-4">
+              At JC Safety Surfacing, we take safety seriously. Our Bonded Rubber Mulch meets and exceeds shock-absorbing properties as outlined in ASTM F-1292-96 and ASTM F-1951-99. It also adheres to standard specifications for Impact Attenuation of Surface Systems under and around playground equipment. Rest assured that when you choose Bonded Rubber Mulch, you’re selecting a surface that not only enhances the aesthetics of your space but also prioritizes the safety and well-being of those who play and walk on it.
+            </p>
+            <h3 className="text-lg font-bold text-blue-900 mb-4">Bonded Rubber Mulch Data</h3>
+            <ul className="list-disc list-inside text-gray-700 mb-4">
+              <li>One-layer system – mixed, poured, and troweled on-site</li>
+              <li>Available in 7 colors (colors can be mixed)</li>
+              <li>Porous system</li>
+              <li>May be installed over Type 2 road base, concrete, or asphalt</li>
+              <li>Typically used outdoors in walkways, tree wells, and landscaping</li>
+              <li>ASTM F1292 for head impact protection</li>
+              <li>ASTM F1951 for accessibility</li>
+              <li>Available for our Ecore™ TRUcircularity™ Program</li>
             </ul>
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <img
-                src="/img/mulch1.jpg"
+                src="/img/mulch1.webp"
                 alt="Rubber Mulch 1"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch2.jpg"
+                src="/img/mulch2.webp"
                 alt="Rubber Mulch 2"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch3.jpg"
+                src="/img/mulch3.webp"
                 alt="Rubber Mulch 3"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch4.jpg"
+                src="/img/mulch4.webp"
                 alt="Rubber Mulch 4"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch5.jpg"
+                src="/img/mulch5.webp"
                 alt="Rubber Mulch 5"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch6.jpg"
+                src="/img/mulch6.webp"
                 alt="Rubber Mulch 6"
                 className="rounded-lg shadow-lg"
               />

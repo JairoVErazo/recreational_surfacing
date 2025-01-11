@@ -125,7 +125,7 @@ export default function HomePage() {
       {/* Sección "Brilliant Design From Start to Finish" */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-left">
+          <h2 className="text-3xl font-bold mb-8 text-left text-orange-500">
             Brilliant Design From Start to Finish
           </h2>
           <p className="text-lg text-gray-600 mb-6 text-left">
@@ -150,7 +150,7 @@ export default function HomePage() {
       {/* Sección "Sustainability Matters" */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-left">
+          <h2 className="text-3xl font-bold mb-8 text-left text-orange-500">
             Sustainability Matters
           </h2>
           <p className="text-lg text-gray-600 text-left">
