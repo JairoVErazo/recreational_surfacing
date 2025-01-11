@@ -1,11 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../componets/NavBar";
 import Footer from "../../componets/Footer";
 
 export default function SystemsPage() {
   const [activeCategory, setActiveCategory] = useState("poured-in-place");
+
+  // Agregamos un useEffect para leer el hash y activar la categoría correspondiente
+  useEffect(() => {
+    const hash = window.location.hash; // Ej: "#poured-in-place"
+    if (hash) {
+      const category = hash.replace("#", "");
+      setActiveCategory(category);
+    }
+  }, []);
 
   const renderCategoryContent = () => {
     switch (activeCategory) {
@@ -318,7 +327,9 @@ export default function SystemsPage() {
       </section>
 
       <section className="bg-gray-50 py-12">
-        <div className="container mx-auto px-6">{renderCategoryContent()}</div>
+        <div className="container mx-auto px-6">
+          {renderCategoryContent()}
+        </div>
       </section>
 
       <Footer />

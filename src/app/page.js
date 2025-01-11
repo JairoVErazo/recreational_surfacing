@@ -58,7 +58,7 @@ export default function HomePage() {
               </h3>
               {/* Ajuste de Link para Next.js */}
               <Link
-                href="/systems#poured-in-place"
+                href="/Systems#poured-in-place"
                 className="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition"
               >
                 Learn more
@@ -76,7 +76,7 @@ export default function HomePage() {
                 Synthetic Turf
               </h3>
               <Link
-                href="/systems#artificial-turf"
+                href="/Systems#artificial-turf"
                 className="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition"
               >
                 Learn more
@@ -94,7 +94,7 @@ export default function HomePage() {
                 Bonded Rubber Mulch
               </h3>
               <Link
-                href="/systems#bonded-rubber-mulch"
+                href="/Systems#bonded-rubber-mulch"
                 className="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition"
               >
                 Learn more
@@ -112,7 +112,7 @@ export default function HomePage() {
                 Equipment Installation
               </h3>
               <Link
-                href="/systems#critical-fall-heights"
+                href="/Systems#critical-fall-heights"
                 className="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition"
               >
                 Learn more
