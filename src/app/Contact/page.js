@@ -1,7 +1,67 @@
+"use client";
+import { useState } from "react";
 import Navbar from "../../componets/NavBar";
 import Footer from "../../componets/Footer";
 
 export default function Contact() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName]   = useState("");
+  const [email, setEmail]         = useState("");
+  const [phone, setPhone]         = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!firstName.trim() || !lastName.trim() || !email.trim() || !phone.trim()) {
+      alert("Todos los campos son obligatorios.");
+      return;
+    }
+
+    const subject = `Nuevo contacto: ${firstName} ${lastName}`;
+    const text = `
+      El cliente ${firstName} ${lastName} quiere comunicarse contigo.
+
+      Estos son sus datos de contacto:
+      - Email: ${email}
+      - Teléfono: ${phone}
+    `;
+    const html = `
+      <p>El cliente <strong>${firstName} ${lastName}</strong> quiere comunicarse contigo.</p>
+      <p><strong>Datos de contacto:</strong></p>
+      <ul>
+        <li><strong>Email:</strong> ${email}</li>
+        <li><strong>Teléfono:</strong> ${phone}</li>
+      </ul>
+    `;
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ subject, text, html }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        alert(`Error al enviar el correo: ${errorData.error}`);
+        return;
+      }
+
+      const data = await response.json();
+      alert(data.message); 
+
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+    } catch (error) {
+      console.error(error);
+      alert("Ocurrió un error al enviar el correo.");
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -36,7 +96,7 @@ export default function Contact() {
                   href="Recreationalsurfacinginc@gmail.com"
                   className="text-blue-500 underline"
                 >
-                 Recreationalsurfacinginc@gmail.com
+                  Recreationalsurfacinginc@gmail.com
                 </a>
               </p>
 
@@ -55,35 +115,46 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div>
-              <form className="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <form
+                onSubmit={handleSubmit}
+                className="bg-gray-50 p-6 rounded-lg shadow-lg"
+              >
                 <div className="mb-4">
                   <label
                     htmlFor="firstName"
                     className="block text-sm font-bold text-gray-700"
                   >
-                    First Name
+                    First Name *
                   </label>
                   <input
                     type="text"
                     id="firstName"
                     placeholder="First Name"
                     className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
+
                 <div className="mb-4">
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-bold text-gray-700"
                   >
-                    Last Name
+                    Last Name *
                   </label>
                   <input
                     type="text"
                     id="lastName"
                     placeholder="Last Name"
                     className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                   />
                 </div>
+
                 <div className="mb-4">
                   <label
                     htmlFor="email"
@@ -97,8 +168,11 @@ export default function Contact() {
                     placeholder="Email"
                     className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
+
                 <div className="mb-4">
                   <label
                     htmlFor="phone"
@@ -112,8 +186,11 @@ export default function Contact() {
                     placeholder="Phone"
                     className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     required
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                 </div>
+
                 <button
                   type="submit"
                   className="bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition w-full"
