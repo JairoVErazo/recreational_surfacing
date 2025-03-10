@@ -8,7 +8,7 @@ export async function POST(request) {
 
     if (!subject || !text || !html) {
       return new Response(
-        JSON.stringify({ error: "Faltan campos obligatorios en el body." }),
+        JSON.stringify({ error: "Missing required fields in the request body." }),
         { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
@@ -24,7 +24,7 @@ export async function POST(request) {
     await sgMail.send(msg);
 
     return new Response(
-      JSON.stringify({ message: "Correo enviado exitosamente" }),
+      JSON.stringify({ message: "Email sent successfully" }),
       {
         status: 200,
         headers: { "Content-Type": "application/json" },
@@ -33,7 +33,7 @@ export async function POST(request) {
   } catch (error) {
     console.error(error);
     return new Response(
-      JSON.stringify({ error: "Error al enviar el correo" }),
+      JSON.stringify({ error: "Error sending email" }),
       {
         status: 500,
         headers: { "Content-Type": "application/json" },

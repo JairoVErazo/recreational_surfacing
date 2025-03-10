@@ -15,15 +15,15 @@ export const metadata = {
   title: "Recreational Surfacing | Safety Surfaces for Playgrounds",
   description: "Explore Recreational Surfacing, leaders in safety surfaces for playgrounds and recreational areas. Durable, safe, and customizable solutions.",
   icons: {
-    icon: "/favicon.ico", // Ruta al favicon en /public
+    icon: "/favicon.ico", ¿
   },
   openGraph: {
     title: "Recreational Surfacing",
     description: "Leaders in safety surfaces for playgrounds and recreational areas.",
-    url: "https://www.recreationalsurfacing.com",
+    url: "https://recreational-surfacing-beta.vercel.app/",
     images: [
       {
-        url: "/og-image.jpg", // Imagen en /public
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Recreational Surfacing - Playground Surfaces",
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://www.recreationalsurfacing.com" />
+        <link rel="canonical" href="https://recreational-surfacing-beta.vercel.app/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -44,12 +44,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Recreational Surfacing Inc.",
-              url: "https://www.recreationalsurfacing.com",
-              logo: "https://www.recreationalsurfacing.com/logo.png",
-              sameAs: [
-                "https://www.facebook.com/recreationalsurfacing",
-                "https://www.twitter.com/recreationalsurfacing",
-              ],
+              url: "https://recreational-surfacing-beta.vercel.app/",
+              logo: "https://recreational-surfacing-beta.vercel.app/",
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+1-800-555-5555",
