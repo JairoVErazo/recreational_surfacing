@@ -13,27 +13,27 @@ export default function Contact() {
     e.preventDefault();
 
     if (!firstName.trim() || !lastName.trim() || !email.trim() || !phone.trim()) {
-      alert("Todos los campos son obligatorios.");
+      alert("All fields are required.");
       return;
     }
-
-    const subject = `Nuevo contacto: ${firstName} ${lastName}`;
+    
+    const subject = `New Contact: ${firstName} ${lastName}`;
     const text = `
-      El cliente ${firstName} ${lastName} quiere comunicarse contigo.
-
-      Estos son sus datos de contacto:
+      The client ${firstName} ${lastName} wants to get in touch with you.
+    
+      Here are their contact details:
       - Email: ${email}
-      - Teléfono: ${phone}
+      - Phone: ${phone}
     `;
     const html = `
-      <p>El cliente <strong>${firstName} ${lastName}</strong> quiere comunicarse contigo.</p>
-      <p><strong>Datos de contacto:</strong></p>
+      <p>The client <strong>${firstName} ${lastName}</strong> wants to get in touch with you.</p>
+      <p><strong>Contact details:</strong></p>
       <ul>
         <li><strong>Email:</strong> ${email}</li>
-        <li><strong>Teléfono:</strong> ${phone}</li>
+        <li><strong>Phone:</strong> ${phone}</li>
       </ul>
     `;
-
+    
     try {
       const response = await fetch("/api/sendEmail", {
         method: "POST",
@@ -42,24 +42,25 @@ export default function Contact() {
         },
         body: JSON.stringify({ subject, text, html }),
       });
-
+    
       if (!response.ok) {
         const errorData = await response.json();
-        alert(`Error al enviar el correo: ${errorData.error}`);
+        alert(`Error sending email: ${errorData.error}`);
         return;
       }
-
+    
       const data = await response.json();
       alert(data.message); 
-
+    
       setFirstName("");
       setLastName("");
       setEmail("");
       setPhone("");
     } catch (error) {
       console.error(error);
-      alert("Ocurrió un error al enviar el correo.");
+      alert("An error occurred while sending the email.");
     }
+    
   };
 
   return (
