@@ -13,7 +13,7 @@ export default function Contact() {
     e.preventDefault();
 
     if (!firstName.trim() || !lastName.trim() || !email.trim() || !phone.trim()) {
-      alert("All fields are required.");
+      alert("All fields are required!");
       return;
     }
     
