@@ -15,7 +15,7 @@ export const metadata = {
   title: "Recreational Surfacing | Safety Surfaces for Playgrounds",
   description: "Explore Recreational Surfacing, leaders in safety surfaces for playgrounds and recreational areas. Durable, safe, and customizable solutions.",
   icons: {
-    icon: "/favicon.ico", ¿
+    icon: "/favicon.ico"
   },
   openGraph: {
     title: "Recreational Surfacing",
