@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://recreational-surfacing.com
+
+# Sitemaps
+Sitemap: https://recreational-surfacing.com/sitemap.xml
