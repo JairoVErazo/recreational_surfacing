@@ -2,18 +2,65 @@ import React from "react";
 import Navbar from "../../componets/NavBar";
 import Footer from "../../componets/Footer";
 
+export const metadata = {
+  title: "About Us | Recreational Surfacing INC - Playground Safety Experts",
+  description: "Pioneers in rubberized playground surfacing since 2003. Certified safety surfaces using eco-friendly materials. ADA compliant installations.",
+  keywords: "playground safety surfacing, rubberized flooring, ADA compliant playgrounds, recycled material surfaces",
+  openGraph: {
+    title: "About Our Company - Recreational Surfacing INC",
+    description: "Industry leaders in safe and sustainable playground surfaces installation",
+    images: [
+      {
+        url: "/img/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Our certified playground installation team",
+      }
+    ],
+  },
+  alternates: {
+    canonical: "https://recreational-surfacing.com/About",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function About() {
   return (
-    <div>
+    <div itemScope itemType="https://schema.org/AboutPage">
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://recreational-surfacing.com/About"
+          },
+          "headline": "About Recreational Surfacing INC",
+          "description": "Certified playground safety surface installers serving North America since 2003",
+          "image": "/img/og-about.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Recreational Surfacing INC",
+            "logo": "/logo.png"
+          },
+          "datePublished": "2024-01-01",
+          "award": "ASTM F1292-22 Certified"
+        })}
+      </script>
+
       <Navbar />
 
-      <section className="bg-gray-50 py-20 mt-24">
+      <section className="bg-gray-50 py-20 mt-24" itemProp="mainContent">
         <div className="container mx-auto px-6 flex flex-col lg:flex-row lg:space-x-12 items-center">
           <div className="lg:w-1/2 mb-12 lg:mb-0">
-            <h1 className="text-4xl font-bold text-orange-600 mb-4">
+            <h1 className="text-4xl font-bold text-orange-600 mb-4" itemProp="headline">
               Recreational Surfacing INC: Redefining Safe and Fun Playgrounds
             </h1>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 mb-6" itemProp="description">
               At Recreational Surfacing INC, we stand as pioneers in the
               manufacturing and installation of rubberized playground safety
               surfacing.
@@ -29,8 +76,10 @@ export default function About() {
           <div className="lg:w-1/2 flex justify-center">
             <img
               src="/img/img.webp"
-              alt="Playground Safety"
+              alt="Certified playground safety installation process"
               className="rounded-lg shadow-lg w-4/5 lg:w-full"
+              loading="lazy"
+              itemProp="image"
             />
           </div>
         </div>
@@ -41,25 +90,27 @@ export default function About() {
           <div className="lg:w-1/2 flex justify-center mb-12 lg:mb-0">
             <img
               src="/img/core.webp"
-              alt="Core Values"
+              alt="Visual representation of our core values"
               className="rounded-lg shadow-lg w-4/5 lg:w-full"
+              loading="lazy"
             />
           </div>
           <div className="lg:w-1/2 lg:pl-10">
+            <h2 className="text-3xl font-bold text-blue-950 mb-6">Core Values</h2>
             <ul className="list-disc list-inside text-lg text-gray-700 space-y-4">
-              <li>
+              <li itemProp="itemListElement">
                 <strong>Safety Paramount:</strong> Quality materials, rigorous
                 standards, accessibility for all users.
               </li>
-              <li>
+              <li itemProp="itemListElement">
                 <strong>Quality:</strong> Ensuring excellence in beauty,
                 durability, safety, and versatility.
               </li>
-              <li>
+              <li itemProp="itemListElement">
                 <strong>Communication:</strong> Transparent, clear, and
                 responsive to client needs and concerns.
               </li>
-              <li>
+              <li itemProp="itemListElement">
                 <strong>Team Work:</strong> Expecting teamwork with our partners
                 and employees.
               </li>
@@ -74,7 +125,7 @@ export default function About() {
             Detailed Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+            <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg" itemProp="hasPart">
               <h3 className="text-xl font-bold text-orange-600 mb-4">
                 Diverse Applications
               </h3>
@@ -89,7 +140,7 @@ export default function About() {
                 surface.
               </p>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+            <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg" itemProp="hasPart">
               <h3 className="text-xl font-bold text-orange-600 mb-4">
                 Quality Materials and Installation
               </h3>
@@ -98,11 +149,11 @@ export default function About() {
                 safe, and made to last. Our experienced installers know how to
                 make a rubber playground safety surface come alive! Our quality
                 installations last. Our work is done fast, right, and on budget.
-                Customers appreciate our friendly service and helpful support –
+                Customers appreciate our friendly service and helpful support -
                 before, during, and after installation.
               </p>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+            <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg" itemProp="hasPart">
               <h3 className="text-xl font-bold text-orange-600 mb-4">
                 Seamless Project Management
               </h3>
@@ -111,7 +162,7 @@ export default function About() {
                 staying on top of every detail from bid and specification
                 through construction and closeout to carefully adhering to
                 schedules and budgets. We confidently guarantee our work because
-                it’s our own people who deliver the quality product and service.
+                it's our own people who deliver the quality product and service.
               </p>
             </div>
           </div>
@@ -125,7 +176,7 @@ export default function About() {
           </h2>
           <p className="text-lg text-gray-700 text-center mb-6">
             Recreational Surfacing INC adheres to the Consumer Product Safety
-            Commission’s guidelines for public playgrounds. We also perform
+            Commission's guidelines for public playgrounds. We also perform
             continual testing on all raw materials used in our systems for
             quality, properties, and strength. Our commitment to sustainability
             is reflected in our upcycling initiatives, which divert thousands of
