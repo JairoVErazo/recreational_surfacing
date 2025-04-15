@@ -89,7 +89,7 @@ export default function Contact() {
                 166 Broadway, Greenlawn, New York 11740
               </p>
               <p className="text-gray-700">
-                Phone: <a href="tel:+15162427155">(516) 242-7155</a>
+                Phone: <a href="tel:+15165247810">(516) 524-7810</a>
               </p>
               <p className="text-gray-700">
                 Email:{" "}
