@@ -289,7 +289,7 @@ export default function SystemsPage() {
           </div>
           <div className="lg:w-1/2 text-center">
             <img
-              src="/img/img2.webp"
+              src="/img/principal.webp"
               alt="Safety Playground"
               className="rounded-lg shadow-lg ml-6"
             />
