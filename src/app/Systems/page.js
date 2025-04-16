@@ -161,7 +161,7 @@ export default function SystemsPage() {
               One of the key characteristics of Bonded Rubber Mulch is its ability to accommodate piling and sloping, creating a natural ground setting that deceives passersby until they step onto the surface and experience its anti-fatigue qualities with each step.
             </p>
             <p className="text-gray-700 mb-4">
-              At JC Safety Surfacing, we take safety seriously. Our Bonded Rubber Mulch meets and exceeds shock-absorbing properties as outlined in ASTM F-1292-96 and ASTM F-1951-99. It also adheres to standard specifications for Impact Attenuation of Surface Systems under and around playground equipment. Rest assured that when you choose Bonded Rubber Mulch, you’re selecting a surface that not only enhances the aesthetics of your space but also prioritizes the safety and well-being of those who play and walk on it.
+              At Recreational Surfacing, we take safety seriously. Our Bonded Rubber Mulch meets and exceeds shock-absorbing properties as outlined in ASTM F-1292-96 and ASTM F-1951-99. It also adheres to standard specifications for Impact Attenuation of Surface Systems under and around playground equipment. Rest assured that when you choose Bonded Rubber Mulch, you’re selecting a surface that not only enhances the aesthetics of your space but also prioritizes the safety and well-being of those who play and walk on it.
             </p>
             <h3 className="text-lg font-bold text-blue-900 mb-4">Bonded Rubber Mulch Data</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4">
@@ -177,32 +177,32 @@ export default function SystemsPage() {
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <img
-                src="/img/mulch1.webp"
+                src="/img/rub1.webp"
                 alt="Rubber Mulch 1"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch2.webp"
+                src="/img/rub7.webp"
                 alt="Rubber Mulch 2"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch3.webp"
+                src="/img/rub3.webp"
                 alt="Rubber Mulch 3"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch4.webp"
+                src="/img/rub4.webp"
                 alt="Rubber Mulch 4"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch5.webp"
+                src="/img/rub5.webp"
                 alt="Rubber Mulch 5"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/mulch6.webp"
+                src="/img/rub6.webp"
                 alt="Rubber Mulch 6"
                 className="rounded-lg shadow-lg"
               />
