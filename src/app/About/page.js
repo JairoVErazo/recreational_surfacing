@@ -169,21 +169,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-orange-600 mb-6">
-            Sustainability Matters
-          </h2>
-          <p className="text-lg text-gray-700 text-center mb-6">
-            Recreational Surfacing INC adheres to the Consumer Product Safety
-            Commission's guidelines for public playgrounds. We also perform
-            continual testing on all raw materials used in our systems for
-            quality, properties, and strength. Our commitment to sustainability
-            is reflected in our upcycling initiatives, which divert thousands of
-            tires from landfills every year.
-          </p>
-        </div>
-      </section>
+     
 
       <Footer />
     </div>
