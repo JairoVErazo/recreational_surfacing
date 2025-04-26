@@ -141,8 +141,6 @@ export default function HomePage() {
             With many popular options like our Poured-in-Place and Synthetic Grass
             or even our Bonded Rubber & Splash Pad Systems, we can easily customize
             our surfacing to meet any safety, design, or aesthetic requirement.
-            Recreational Surfacing INC meets and exceeds all CPSC, IPEMA, ASTM, and
-            ADA guidelines for playground surfacing.
           </p>
         </div>
       </section>

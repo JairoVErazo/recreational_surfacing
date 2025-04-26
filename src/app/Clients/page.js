@@ -27,7 +27,7 @@ export default function Clients() {
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-gray-50 rounded-lg shadow-lg p-6 text-center">
             <img
-              src="/img/img.webp"
+              src="/img/img.jpg"
               alt="For School Administrators"
               className="mx-auto mb-4"
             />
@@ -47,7 +47,7 @@ export default function Clients() {
 
           <div className="bg-gray-50 rounded-lg shadow-lg p-6 text-center">
             <img
-              src="/img/img2.webp"
+              src="/img/img2.JPG"
               alt="For Architects & Planners"
               className="mx-auto mb-4"
             />

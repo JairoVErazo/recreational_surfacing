@@ -57,7 +57,7 @@ export default function SystemsPage() {
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <img
-                src="/img/cat1.webp"
+                src="/img/cat1.jpeg"
                 alt="Gallery Image 1"
                 className="rounded-lg shadow-lg"
               />
@@ -67,7 +67,7 @@ export default function SystemsPage() {
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat3.webp"
+                src="/img/cat3.jpeg"
                 alt="Gallery Image 3"
                 className="rounded-lg shadow-lg"
               />
@@ -77,12 +77,12 @@ export default function SystemsPage() {
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat5.webp"
+                src="/img/cat5.jpeg"
                 alt="Gallery Image 5"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/cat6.webp"
+                src="/img/cat6.jpeg"
                 alt="Gallery Image 6"
                 className="rounded-lg shadow-lg"
               />
@@ -233,12 +233,12 @@ export default function SystemsPage() {
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               <img
-                src="/img/equi1.webp"
+                src="/img/equi1.JPG"
                 alt="Equipment Installation 1"
                 className="rounded-lg shadow-lg"
               />
               <img
-                src="/img/equi2.webp"
+                src="/img/equi2.JPG"
                 alt="Equipment Installation 2"
                 className="rounded-lg shadow-lg"
               />

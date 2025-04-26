@@ -5,18 +5,23 @@ import Footer from "../../componets/Footer";
 
 export default function Contact() {
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName]   = useState("");
-  const [email, setEmail]         = useState("");
-  const [phone, setPhone]         = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!firstName.trim() || !lastName.trim() || !email.trim() || !phone.trim()) {
+    if (
+      !firstName.trim() ||
+      !lastName.trim() ||
+      !email.trim() ||
+      !phone.trim()
+    ) {
       alert("All fields are required!");
       return;
     }
-    
+
     const subject = `New Contact: ${firstName} ${lastName}`;
     const text = `
       The client ${firstName} ${lastName} wants to get in touch with you.
@@ -33,7 +38,7 @@ export default function Contact() {
         <li><strong>Phone:</strong> ${phone}</li>
       </ul>
     `;
-    
+
     try {
       const response = await fetch("/api/sendEmail", {
         method: "POST",
@@ -42,16 +47,16 @@ export default function Contact() {
         },
         body: JSON.stringify({ subject, text, html }),
       });
-    
+
       if (!response.ok) {
         const errorData = await response.json();
         alert(`Error sending email: ${errorData.error}`);
         return;
       }
-    
+
       const data = await response.json();
-      alert(data.message); 
-    
+      alert(data.message);
+
       setFirstName("");
       setLastName("");
       setEmail("");
@@ -60,7 +65,6 @@ export default function Contact() {
       console.error(error);
       alert("An error occurred while sending the email.");
     }
-    
   };
 
   return (
@@ -86,7 +90,7 @@ export default function Contact() {
                 Recreational Surfacing INC
               </h2>
               <p className="text-gray-700">
-                166 Broadway, Greenlawn, New York 11740
+                27020 Oakwood Cir Olmsted Twp, OH 44138 United States
               </p>
               <p className="text-gray-700">
                 Phone: <a href="tel:+15165247810">(516) 524-7810</a>
