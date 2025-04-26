@@ -7,14 +7,16 @@ import Footer from "../../componets/Footer";
 export default function SystemsPage() {
   const [activeCategory, setActiveCategory] = useState("poured-in-place");
 
-  // Agregamos un useEffect para leer el hash y activar la categoría correspondiente
+  // Leer hash de URL para activar categoría
   useEffect(() => {
     const hash = window.location.hash; // Ej: "#poured-in-place"
     if (hash) {
-      const category = hash.replace("#", "");
-      setActiveCategory(category);
+      setActiveCategory(hash.replace("#", ""));
     }
   }, []);
+
+  // Clases para imágenes con tamaño uniforme en las galerías
+  const imageClasses = "w-full h-48 object-cover rounded-lg shadow-lg";
 
   const renderCategoryContent = () => {
     switch (activeCategory) {
@@ -25,13 +27,13 @@ export default function SystemsPage() {
               POURED-IN-PLACE RUBBER SAFETY SURFACING
             </h2>
             <p className="text-gray-700 mb-4">
-              Poured-In-Place safety surfacing has become the safety surfacing of
-              choice for many of our clients due to the design flexibility options,
-              seamless installation, and low maintenance requirements. The
-              fabrication on-site provides many options, shapes, and thicknesses
-              for almost any application. The material can be applied to slopes as
-              steep as 30 degrees, which makes it perfect for mounds, hills, and
-              other elevation changes.
+              Poured-In-Place safety surfacing has become the safety surfacing
+              of choice for many of our clients due to the design flexibility
+              options, seamless installation, and low maintenance requirements.
+              The fabrication on-site provides many options, shapes, and
+              thicknesses for almost any application. The material can be
+              applied to slopes as steep as 30 degrees, which makes it perfect
+              for mounds, hills, and other elevation changes.
             </p>
             <h3 className="text-lg font-bold text-blue-900 mb-3">
               Poured-in-Place Benefits
@@ -39,56 +41,36 @@ export default function SystemsPage() {
             <ul className="list-disc list-inside text-gray-700 mb-4">
               <li>Meets all playground fall heights requirements</li>
               <li>
-                Seamless, UV resistant, slip resistant, drains quickly & easy to
-                maintain
+              Seamless, UV resistant, slip resistant, drains quickly & easy to maintain
               </li>
               <li>Custom designs & colors</li>
               <li>ASTM & ADA approved</li>
-              <li>
-                Poured-in-Place safety surface can be installed both indoor and
-                outdoor
-              </li>
+              <li>Poured-in-Place safety surface can be installed both indoor and outdoor</li>
               <li>Proven durability</li>
-              <li>
-                Materials are finest TPV granules and 100% polyurethane binder
-              </li>
+              <li>Materials are finest TPV granules and 100% polyurethane binder</li>
               <li>7-year industry-best Warranty</li>
             </ul>
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <img
-                src="/img/cat1.jpeg"
-                alt="Gallery Image 1"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/cat2.webp"
-                alt="Gallery Image 2"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/cat3.jpeg"
-                alt="Gallery Image 3"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/cat4.webp"
-                alt="Gallery Image 4"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/cat5.jpeg"
-                alt="Gallery Image 5"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/cat6.jpeg"
-                alt="Gallery Image 6"
-                className="rounded-lg shadow-lg"
-              />
+              {[
+                "cat1.jpeg",
+                "cat2.webp",
+                "cat3.jpeg",
+                "cat4.webp",
+                "cat5.jpeg",
+                "cat6.jpeg",
+              ].map((file, i) => (
+                <img
+                  key={i}
+                  src={`/img/${file}`}
+                  alt={`Poured gallery ${i + 1}`}
+                  className={imageClasses}
+                />
+              ))}
             </div>
           </div>
         );
+
       case "artificial-turf":
         return (
           <div className="bg-white rounded-lg shadow p-6">
@@ -96,12 +78,30 @@ export default function SystemsPage() {
               Synthetic Turf
             </h2>
             <p className="text-gray-700 mb-4">
-              A playground should be a safe place for your children to run and play, however sooner or later your kids are going to end up on the ground or taking a fall when they’re playing. Artificial turf offers the perfect solution for playground surfacing. Whether you are a day care facility, community play area, public park, or private playground area, we have been testing our products for years to ensure that we produce only the best artificial turf surface for these applications. We have systems available that can meet any desired fall height rating up to 12 feet! Artificial turf is softer and safer than gravel, dirt, wood mulch or natural grass and is practically maintenance-free. You can feel confident that your children will have a safe play surface when you choose artificial turf to cover your playground. Our advanced primary backing allows maximum drainage and is environmentally friendly. Combine this with our premium fibers and industry leading turf technology and you get the absolute best surface on the playground market today.
+              A playground should be a safe place for your children to run and
+              play, however sooner or later your kids are going to end up on the
+              ground or taking a fall when they’re playing. Artificial turf
+              offers the perfect solution for playground surfacing. Whether you
+              are a day care facility, community play area, public park, or
+              private playground area, we have been testing our products for
+              years to ensure that we produce only the best artificial turf
+              surface for these applications. We have systems available that can
+              meet any desired fall height rating up to 12 feet! Artificial turf
+              is softer and safer than gravel, dirt, wood mulch or natural grass
+              and is practically maintenance-free. You can feel confident that
+              your children will have a safe play surface when you choose
+              artificial turf to cover your playground. Our advanced primary
+              backing allows maximum drainage and is environmentally friendly.
+              Combine this with our premium fibers and industry leading turf
+              technology and you get the absolute best surface on the playground
+              market today. Synthetic turf systems are designed from the ground
+              up for safety. With our PolyGreen padding, antimicrobial infill
+              and other safety features, these systems have been used to
+              successfully surface millions of square feet of commercial
+              playgrounds. If you want the peace of mind of going with a proven
+              system, playground turf for your backyard.
             </p>
-            <p className="text-gray-700 mb-4">
-              Synthetic turf systems are designed from the ground up for safety. With our PolyGreen padding, antimicrobial infill and other safety features, these systems have been used to successfully surface millions of square feet of commercial playgrounds. If you want the peace of mind of going with a proven system, playground turf for your backyard.
-            </p>
-            <h3 className="text-lg font-bold text-blue-900 mb-4">Synthetic Turf Benefits</h3>
+            <h3 className="text-lg font-bold text-blue-900 mb-4">Benefits</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4">
               <li>Padded underlayment</li>
               <li>Reduces allergic reactions</li>
@@ -112,39 +112,18 @@ export default function SystemsPage() {
             </ul>
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <img
-                src="/img/turf1.webp"
-                alt="Synthetic Turf 1"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/turf2.webp"
-                alt="Synthetic Turf 2"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/turf3.webp"
-                alt="Synthetic Turf 3"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/turf4.webp"
-                alt="Synthetic Turf 4"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/turf5.webp"
-                alt="Synthetic Turf 5"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/turf6.webp"
-                alt="Synthetic Turf 6"
-                className="rounded-lg shadow-lg"
-              />
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <img
+                  key={i}
+                  src={`/img/turf${i}.webp`}
+                  alt={`Turf gallery ${i}`}
+                  className={imageClasses}
+                />
+              ))}
             </div>
           </div>
         );
+
       case "bonded-rubber-mulch":
         return (
           <div className="bg-white rounded-lg shadow p-6">
@@ -152,63 +131,60 @@ export default function SystemsPage() {
               Bonded Rubber Mulch
             </h2>
             <p className="text-gray-700 mb-4">
-              Discover the beauty of nature and safety combined with Bonded Rubber Mulch safety surfacing—an innovative solution for creating unique trails, paths, and playground surfaces. Our one-step pour system offers a cost-effective, long-lasting, safe, and durable option for playgrounds, parks, zoos, horse walking/training facilities, and more.
+              Discover the beauty of nature and safety combined with Bonded
+              Rubber Mulch safety surfacing—an innovative solution for creating
+              unique trails, paths, and playground surfaces. Our one-step pour
+              system offers a cost-effective, long-lasting, safe, and durable
+              option for playgrounds, parks, zoos, horse walking/training
+              facilities, and more. Bonded Rubber Mulch is a spectacular choice
+              that seamlessly blends into natural settings while providing
+              unmatched safety. Its versatility allows it to be easily combined
+              with EPDM product inlays, extending design possibilities and
+              enhancing the overall aesthetic appeal of any space. One of the
+              key characteristics of Bonded Rubber Mulch is its ability to
+              accommodate piling and sloping, creating a natural ground setting
+              that deceives passersby until they step onto the surface and
+              experience its anti-fatigue qualities with each step. At
+              Recreational Surfacing, we take safety seriously. Our Bonded
+              Rubber Mulch meets and exceeds shock-absorbing properties as
+              outlined in ASTM F-1292-96 and ASTM F-1951-99. It also adheres to
+              standard specifications for Impact Attenuation of Surface Systems
+              under and around playground equipment. Rest assured that when you
+              choose Bonded Rubber Mulch, you’re selecting a surface that not
+              only enhances the aesthetics of your space but also prioritizes
+              the safety and well-being of those who play and walk on it.
             </p>
-            <p className="text-gray-700 mb-4">
-              Bonded Rubber Mulch is a spectacular choice that seamlessly blends into natural settings while providing unmatched safety. Its versatility allows it to be easily combined with EPDM product inlays, extending design possibilities and enhancing the overall aesthetic appeal of any space.
-            </p>
-            <p className="text-gray-700 mb-4">
-              One of the key characteristics of Bonded Rubber Mulch is its ability to accommodate piling and sloping, creating a natural ground setting that deceives passersby until they step onto the surface and experience its anti-fatigue qualities with each step.
-            </p>
-            <p className="text-gray-700 mb-4">
-              At Recreational Surfacing, we take safety seriously. Our Bonded Rubber Mulch meets and exceeds shock-absorbing properties as outlined in ASTM F-1292-96 and ASTM F-1951-99. It also adheres to standard specifications for Impact Attenuation of Surface Systems under and around playground equipment. Rest assured that when you choose Bonded Rubber Mulch, you’re selecting a surface that not only enhances the aesthetics of your space but also prioritizes the safety and well-being of those who play and walk on it.
-            </p>
-            <h3 className="text-lg font-bold text-blue-900 mb-4">Bonded Rubber Mulch Data</h3>
+            <h3 className="text-lg font-bold text-blue-900 mb-4">Data</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4">
               <li>One-layer system – mixed, poured, and troweled on-site</li>
               <li>Available in 7 colors (colors can be mixed)</li>
               <li>Porous system</li>
-              <li>May be installed over Type 2 road base, concrete, or asphalt</li>
-              <li>Typically used outdoors in walkways, tree wells, and landscaping</li>
+              <li>
+                May be installed over Type 2 road base, concrete, or asphalt
+              </li>
+              <li>
+                Typically used outdoors in walkways, tree wells, and landscaping
+              </li>
               <li>ASTM F1292 for head impact protection</li>
               <li>ASTM F1951 for accessibility</li>
               <li>Available for our Ecore™ TRUcircularity™ Program</li>
             </ul>
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <img
-                src="/img/rub1.webp"
-                alt="Rubber Mulch 1"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/rub7.webp"
-                alt="Rubber Mulch 2"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/rub3.webp"
-                alt="Rubber Mulch 3"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/rub4.webp"
-                alt="Rubber Mulch 4"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/rub5.webp"
-                alt="Rubber Mulch 5"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/rub6.webp"
-                alt="Rubber Mulch 6"
-                className="rounded-lg shadow-lg"
-              />
+              {["rub1", "rub7", "rub3", "rub4", "rub5", "rub6"].map(
+                (name, i) => (
+                  <img
+                    key={i}
+                    src={`/img/${name}.webp`}
+                    alt={`Rubber mulch ${i + 1}`}
+                    className={imageClasses}
+                  />
+                )
+              )}
             </div>
           </div>
         );
+
       case "critical-fall-heights":
         return (
           <div className="bg-white rounded-lg shadow p-6">
@@ -232,39 +208,18 @@ export default function SystemsPage() {
             </ul>
             <h3 className="text-lg font-bold text-blue-900 mb-4">Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <img
-                src="/img/equi1.JPG"
-                alt="Equipment Installation 1"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/equi2.JPG"
-                alt="Equipment Installation 2"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/equi3.webp"
-                alt="Equipment Installation 3"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/equi4.webp"
-                alt="Equipment Installation 4"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/equi5.webp"
-                alt="Equipment Installation 5"
-                className="rounded-lg shadow-lg"
-              />
-              <img
-                src="/img/equi6.webp"
-                alt="Equipment Installation 6"
-                className="rounded-lg shadow-lg"
-              />
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <img
+                  key={i}
+                  src={`/img/equi${i}${i < 3 ? ".JPG" : ".webp"}`}
+                  alt={`Equipment ${i}`}
+                  className={imageClasses}
+                />
+              ))}
             </div>
           </div>
         );
+
       default:
         return null;
     }
@@ -273,7 +228,7 @@ export default function SystemsPage() {
   return (
     <div>
       <Navbar />
-
+      {/* Hero */}
       <section className="bg-gray-50 pt-36 pb-12">
         <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 text-center lg:text-left">
@@ -291,61 +246,37 @@ export default function SystemsPage() {
             <img
               src="/img/principal.webp"
               alt="Safety Playground"
-              className="rounded-lg shadow-lg ml-6"
+              className="rounded-lg shadow-lg mx-auto"
             />
           </div>
         </div>
       </section>
 
+      {/* Nav Buttons */}
       <section className="bg-white shadow-md sticky top-16 z-40">
         <div className="container mx-auto px-6 flex justify-center space-x-6 py-4">
-          <button
-            className={`text-lg font-medium ${
-              activeCategory === "poured-in-place"
-                ? "text-orange-600"
-                : "text-gray-700"
-            } hover:text-orange-600 transition`}
-            onClick={() => setActiveCategory("poured-in-place")}
-          >
-            Poured-In-Place
-          </button>
-          <button
-            className={`text-lg font-medium ${
-              activeCategory === "artificial-turf"
-                ? "text-orange-600"
-                : "text-gray-700"
-            } hover:text-orange-600 transition`}
-            onClick={() => setActiveCategory("artificial-turf")}
-          >
-            Synthetic Turf
-          </button>
-          <button
-            className={`text-lg font-medium ${
-              activeCategory === "bonded-rubber-mulch"
-                ? "text-orange-600"
-                : "text-gray-700"
-            } hover:text-orange-600 transition`}
-            onClick={() => setActiveCategory("bonded-rubber-mulch")}
-          >
-            Bonded Rubber Mulch
-          </button>
-          <button
-            className={`text-lg font-medium ${
-              activeCategory === "critical-fall-heights"
-                ? "text-orange-600"
-                : "text-gray-700"
-            } hover:text-orange-600 transition`}
-            onClick={() => setActiveCategory("critical-fall-heights")}
-          >
-            Equipment Installation
-          </button>
+          {[
+            { key: "poured-in-place", label: "Poured-In-Place" },
+            { key: "artificial-turf", label: "Synthetic Turf" },
+            { key: "bonded-rubber-mulch", label: "Bonded Rubber Mulch" },
+            { key: "critical-fall-heights", label: "Equipment Installation" },
+          ].map((btn) => (
+            <button
+              key={btn.key}
+              className={`text-lg font-medium ${
+                activeCategory === btn.key ? "text-orange-600" : "text-gray-700"
+              } hover:text-orange-600 transition`}
+              onClick={() => setActiveCategory(btn.key)}
+            >
+              {btn.label}
+            </button>
+          ))}
         </div>
       </section>
 
+      {/* Content */}
       <section className="bg-gray-50 py-12">
-        <div className="container mx-auto px-6">
-          {renderCategoryContent()}
-        </div>
+        <div className="container mx-auto px-6">{renderCategoryContent()}</div>
       </section>
 
       <Footer />

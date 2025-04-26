@@ -75,7 +75,7 @@ export default function About() {
           </div>
           <div className="lg:w-1/2 flex justify-center">
             <img
-              src="/img/img.webp"
+              src="/img/img2.JPG"
               alt="Certified playground safety installation process"
               className="rounded-lg shadow-lg w-4/5 lg:w-full"
               loading="lazy"
