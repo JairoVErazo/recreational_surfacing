@@ -146,21 +146,6 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-
-      {/* Sección "Sustainability Matters" */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-left text-orange-500">
-            Sustainability Matters
-          </h2>
-          <p className="text-lg text-gray-600 text-left">
-            Our materials and products conform to critical standards and
-            certifications. Please view each product page for individual
-            qualifications, including CPCS, ADA, ADAAG, ASTM, and IPEMA standards.
-          </p>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
